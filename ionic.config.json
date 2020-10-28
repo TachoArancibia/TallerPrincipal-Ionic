@@ -1,0 +1,7 @@
+{
+  "name": "tallerPrincipal-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
