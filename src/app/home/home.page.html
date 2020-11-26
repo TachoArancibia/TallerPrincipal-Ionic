@@ -1,20 +1,88 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Datos del Cliente
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item-divider><ion-label>Ingrese los datos del Cliente</ion-label></ion-item-divider>
+  <ion-item>
+    <ion-label>RUT: </ion-label>
+    <ion-input inputmode = "numeric" pattern = "tel" placeholder = "12333444-5" [(ngModel)] = rutCliente_var ></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label>Nombres: </ion-label>
+    <ion-input inputmode = "text" pattern  = "text" placeholder = "Juan Ignacio"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Apellidos:</ion-label>
+    <ion-input  inputmode = "text" pattern = "text" placeholder = "Cabezas Cruces"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Teléfono: </ion-label>
+    <ion-input  inputmode = "tel" pattern = "tel" placeholder = "+569777788555"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email: </ion-label>
+    <ion-input  inputmode = "email" pattern = "email" placeholder = "email@gmail.com"></ion-input>
+  </ion-item>
+
+  <ion-item> 
+    <ion-label>Región: </ion-label>
+  <ion-select name="regiones" [(ngModel)] = "selected_option" (ionChange) = "buscarCiudad()">
+    <ion-select-option value="1"> 1 Tarapaca</ion-select-option>
+    <ion-select-option value="2"> 2 Antofagasta</ion-select-option>
+    <ion-select-option value="3"> 3 Atacama</ion-select-option>
+    <ion-select-option value="4"> 4 Coquimbo</ion-select-option>
+    <ion-select-option value="5"> 5 Valparaiso</ion-select-option>
+    <ion-select-option value="6"> 6 O'Higgins</ion-select-option>
+    <ion-select-option value="7"> 7 Maule</ion-select-option>
+    <ion-select-option value="8"> 8 Bio - Bio</ion-select-option>
+    <ion-select-option value="9"> 9 Araucania</ion-select-option>
+    <ion-select-option value="10"> 10 Los Lagos</ion-select-option>
+    <ion-select-option value="11"> 11 Aisen</ion-select-option>
+    <ion-select-option value="12"> 12 Magallanes Y Antartica</ion-select-option>
+    <ion-select-option value="13"> 13 Metropolitana</ion-select-option>
+    <ion-select-option value="14"> 14 Los Rios</ion-select-option>
+    <ion-select-option value="15"> 15 Arica y Parinacota</ion-select-option>
+  </ion-select>
+  </ion-item>
+  <ion-item>
+  <ion-label>Comuna: </ion-label>
+  <ion-select name="comuna" >
+      <ion-select-option *ngFor="let x of selected_comunas" value="{{x}}" > {{x}}</ion-select-option>
+  </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Calle: </ion-label>
+    <ion-input inputmode="text" pattern="text" placeholder = "Avenida Verde"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Número: </ion-label>
+    <ion-input inputmode="number" placeholder = "1111"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>(Opcional) Otros: </ion-label>
+    <ion-input inputmode="text" pattern ="text" placeholder = "Dep 1601 Block D "></ion-input>
+  </ion-item>
+
+<ion-grid>
+<ion-row>
+<ion-col >
+  <ion-button (click)="irAtras()">Atrás</ion-button>
+</ion-col><ion-col>
+  <ion-button (click)="siguientePaso()" >Siguiente</ion-button>
+</ion-col>
+</ion-row>
+</ion-grid>
 </ion-content>

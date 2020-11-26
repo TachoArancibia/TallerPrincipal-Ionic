@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos del Vehículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item-divider><ion-label>Ingrese los datos del Vehículo</ion-label></ion-item-divider>
+<ion-item>
+  <ion-label>Patente: </ion-label>
+  <ion-input pattern="text" inputmode="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Marca: </ion-label>
+  <ion-input pattern="text" inputmode="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Modelo: </ion-label>
+  <ion-input pattern="text" inputmode="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Año: </ion-label>
+  <ion-input pattern = "number" inputmode ="number"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>VIN: </ion-label>
+  <ion-input pattern = "text" inputmode= "text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Kilometraje: </ion-label>
+  <ion-input pattern = "number" inputmode="number"></ion-input>
+</ion-item>
+
+<ion-grid>
+  <ion-row>
+  <ion-col >
+    <ion-button (click) = "irAtras()">Atrás</ion-button>
+  </ion-col><ion-col>
+    <ion-button (click) = "irSiguiente()">Siguiente</ion-button>
+  </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

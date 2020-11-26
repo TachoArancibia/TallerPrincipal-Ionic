@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos del Vehículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item-divider><ion-label>Escriba el motivo de la visita y tome capturas</ion-label></ion-item-divider>
+<ion-item>
+  <ion-label>Motivo: </ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Lado delantero: </ion-label>
+  <ion-fab-button (click)= "addPhotoToGallery()">
+  <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-item>
+
+<ion-item>
+  <ion-label>Lado trasero: </ion-label>  
+  <ion-fab-button (click)= "addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-item>
+
+<ion-item>
+  <ion-label>Lado izquiedo:</ion-label>
+  <ion-fab-button (click)= "addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-item>
+
+<ion-item>
+  <ion-label>Lado derecho: </ion-label>
+  <ion-fab-button (click)= "addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-item>
+
+<ion-item>
+  <ion-label>Tablero: </ion-label>
+  <ion-fab-button (click)= "addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-item>
+
+<ion-grid>
+  <ion-row>
+  <ion-col >
+    <ion-button (click) = "irAtras()">Atrás</ion-button>
+  </ion-col><ion-col>
+    <ion-button (click) = "irSiguiente()">Finalizar</ion-button>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-content>

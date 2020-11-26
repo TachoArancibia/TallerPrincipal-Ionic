@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-title>Menú Principal</ion-title>
+      <ion-col class="ion-align-self-end"><ion-fab-button (click)= "cerrarSesion()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-fab-button></ion-col>
+  </ion-row>
+  </ion-grid>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-button (click)="irIngresarOrden()">Ingresar Orden</ion-button>
+    </ion-row><ion-row>
+      <ion-button (click)="irPendientes()" >Pendientes</ion-button>
+  </ion-row>
+  </ion-grid>
+</ion-content>
